@@ -1,0 +1,175 @@
+ {% load static %}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<title>petshop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+	<link rel="stylesheet" href="{% static 'css/style-carrinho.css' %}">
+	
+
+	<!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+
+	<!-- <link rel="stylesheet" href="css/style-sass.css" /> -->
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><span id="logo-p">Pet</span><span id="logo-s">Shop</span></div>
+		<div id="hdr-navbar"><span class="sign"><a class="act" href="login/Cadastro.html">Cadastro</a></span>
+			<span class="sign"><a href="login/signin.html">Entrar</a></span>
+			<span class="sign"><a href="planos/planos.html">Planos</a></span>
+			<span class="sign"><a href="carrinho/index.html">Produtos</a></span>
+		</div>
+	</header>
+
+	<div class="header">
+		<div class="slider">
+			<!-- fade css -->
+
+			<div class="myslide fade">
+				<div class="txt">
+					<h1>10%OFF</h1>
+					<p>Em seu primeiro pedido</p>
+				</div>
+				<img class="anm" src="image/slide1.jpg" style="width: 100%; height: 100%;">
+			</div>
+
+			<div class="myslide fade">
+				<div class="txt">
+					<h1>Atendimento</h1>
+					<p>Esteja em contato<br>com os melhores petshop's do pais</p>
+				</div>
+				<img class="anm" src="image/slide2.jpg" style="width: 100%; height: 100%;">
+			</div>
+
+			<div class="myslide fade">
+				<div class="txt">
+					<h1>Doações</h1>
+					<p>Fazemos doações para Ong's de animais de rua</p>
+				</div>
+				<img class="anm" src="image/slide3.jpg" style="width: 100%; height: 100%;">
+			</div>
+
+			<div class="myslide fade">
+				<div class="txt">
+					<h1>Planos</h1>
+					<p>Assine já um plano para o seu Pet!</p>
+
+				</div>
+				<img class="anm" src="image/slide4.jpg" style="width: 100%; height: 100%;">
+			</div>
+
+			<div class="myslide fade">
+				<div class="txt">
+					<h1>Serviços</h1>
+					<p>Aqui você encontra todos os tipos de serviços para o seu Pet, desde Freelancers até Petshops</p>
+				</div>
+				<img class="anm" src="image/slide5.jpg" style="width: 100%; height: 100%;">
+			</div>
+			<!-- /fade css -->
+
+			<!-- onclick js -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="dotsbox" style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+			<!-- /onclick js -->
+		</div>
+	</div>
+	
+
+	<footer>
+		<div class="container-footer">
+			<div class="row-footer">
+				<!-- footer col-->
+				<div class="footer-col">
+					<h4>Quem somos?</h4>
+					<ul>
+						<li><a href="#">empresa do ramo veterinário disposta em uma plataforma 100% online</a></li>
+						<li><a href="#">O objetivo principal é facilitar a interação tutores de pets e
+								Petshops/prestadores de serviços</a></li>
+
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Criadores</h4>
+					<ul>
+						<li><a href="https://instagram.com/danii.vitoria?igshid=N2ZiY2E3YmU="> <i
+									class="fa fa-instagram"></i> Danielle Vitória dos Santos </a></li>
+						<li><a href="https://instagram.com/_kerubyn?igshid=N2ZiY2E3YmU="> <i
+									class="fa fa-instagram"></i> Kauã Kelvyn </a></li>
+						<li><a href="https://instagram.com/meowsop?igshid=N2ZiY2E3YmU="> <i class="fa fa-instagram"></i>
+								Alana de Goes </a></li>
+						<li><a href="https://instagram.com/carolinemt__?igshid=N2ZiY2E3YmU="> <i
+									class="fa fa-instagram"></i> Caroline Mota</a></li>
+						<li><a href="https://instagram.com/jaime_willian?igshid=N2ZiY2E3YmU="> <i
+									class="fa fa-instagram"></i> Jaime William</a></li>
+						<li><a href="#"> <i class="fa fa-instagram"></i> Hendryk Costa</a></li>
+
+					</ul>
+				</div>
+
+				<!--end footer col-->
+				<!-- footer col-->
+				<div class="footer-col">
+					<h4>Contatos</h4>
+					<ul>
+						<li><a href="https://www.instagram.com/petshopinfo/"> <i class="fa fa-instagram"></i>
+								Petshop</a></li>
+						<li><a href="#">Celular: (082) 98864-0483</a></li>
+						<li><a href="#">Email: dvss4@aluno.ifal.edu.br</a></li>
+						<li><a href="#">Entre em contato com a gente caso ocorra qualquer problema</a></li>
+						<li><a href="#">Fale conosco caso queira fazer doações!!</a></li>
+
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Doações</h4>
+					<ul>
+						<li><a href="#">Nossa empresa busca fazer ligação com ONG 's de cuidado à animais de rua.</a>
+						</li>
+						<li><a href="#">o que doar? Ração, brinquedos, dinheiro</a></li>
+						<li><a href="#">Entre em contato com a gente caso queira ser nosso doador!!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+	{% comment %} <script src="js/javascript.js"></script> {% endcomment %}
+	{% comment %} <script src="produtos.js"></script> {% endcomment %}
+	
+    <script src="{% static 'js/pizza.js' %}"></script>
+</body>
+
+</html> 
