@@ -36,7 +36,10 @@ def store(request):
 
 
 def produtos(request):
-    return render(request, 'produtos.html')
+    data = {}
+    data['user'] = User.objects.get(email =request.user.email)
+    
+    return render(request, 'produtos.html', data)
 
 def dologin(request):
     data = {}
