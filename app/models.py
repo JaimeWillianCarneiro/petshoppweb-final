@@ -2,10 +2,9 @@ from django.db import models
 
 # Create your models here.
 SEX_CHOICES = (
-    ('easy', 'easy'),
-    ('medium', 'medium'),
-    ('hard', 'hard'),
-)
+    ('F', 'F'),
+    ('M', 'M'),
+    
 
 #OK
 class cliente(models.Model):
