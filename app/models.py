@@ -4,7 +4,7 @@ from django.db import models
 SEX_CHOICES = (
     ('F', 'F'),
     ('M', 'M'),
-    
+)
 
 #OK
 class cliente(models.Model):

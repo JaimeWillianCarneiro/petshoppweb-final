@@ -54,3 +54,8 @@ def dologin(request):
         data['class'] = 'alert-danger'
         return render(request,'login.html',data)
 
+
+
+def logouts(request):
+    logout(request)
+    return redirect('/home/')
