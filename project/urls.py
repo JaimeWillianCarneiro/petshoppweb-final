@@ -22,7 +22,7 @@ urlpatterns = [
 
     path('', home),
     path('home/', home),
-    path('painellogin/', painellogin),
+    path('login/', painellogin),
     path('cadastro/', cadastro), 
     path('store/', store),
     path('dologin/', dologin),
