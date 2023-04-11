@@ -20,18 +20,29 @@ def painellogin(request):
 
 def store(request):
     data = {}
+    try:
+        usuario_aux = User.objects.get(email=request.POST['email'])
+            
+        usuario_aux1 = User.objects.get(username=request.POST['username'])
 
-    if(request.POST['password'] != request.POST['password-conf']):
-        data['msg'] = 'Senha e confirmação de senha diferentes!'
-        data['class'] = 'alert-danger'
-    else:
-        print(request.POST['user'])
-        user = User.objects.create_user(request.POST['user'], request.POST['email'], request.POST['password'])
-        user.first_name = request.POST['name']
-        user.last_name = request.POST['last-name']
-        user.save()
-        data['msg'] = 'Usuário cadastrado com sucesso!'
-        data['class'] = 'alert-success'
+        if usuario_aux or usuario_aux1 :
+            return render(request, 'caminho para o index', {'msg': 'Erro! Já existe um usuário com o mesmo e-mail'})
+                
+            data['msg'] = 'Já existe um usuário com o mesmo e-mail ou como mesmo nome de usuário!'
+            data['class'] = 'alert-danger'
+                        
+    except User.DoesNotExist:
+        if(request.POST['password'] != request.POST['password-conf']):
+            data['msg'] = 'Senha e confirmação de senha diferentes!'
+            data['class'] = 'alert-danger'
+        else:
+            print(request.POST['user'])
+            user = User.objects.create_user(request.POST['user'], request.POST['email'], request.POST['password'])
+            user.first_name = request.POST['name']
+            user.last_name = request.POST['last_name']
+            user.save()
+            data['msg'] = 'Usuário cadastrado com sucesso!'
+            data['class'] = 'alert-success'
     return render(request,'cadastro.html',data)
 
 
