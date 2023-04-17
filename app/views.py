@@ -13,15 +13,12 @@ def cadastro (request):
 
 def processaform(request):
     form = formularioCadastro(request.POST)
-    nome = form.data['nome']
-    
-    email = form.data['email']
-    senha = form.data['password']
-    
-    data = {}
-    data['msg'] = 'Usuário cadastrado com sucesso!'
-    data['class'] = 'alert-success'
-    return render(request,'cadastro.html',data)
+    if form.is_valid:
+        form.save()
+        data = {}
+        data['msg'] = 'Usuário cadastrado com sucesso!'
+        data['class'] = 'alert-success'
+        return render(request,'cadastro.html',data)
     
 
 
