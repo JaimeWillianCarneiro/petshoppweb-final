@@ -1,14 +1,28 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-
+from .forms import formularioCadastro
 def home(request):
     return render(request, 'index.html')
 
 # Create your views here.
 def cadastro (request):
-    return render(request, 'cadastro.html')
+    form = formularioCadastro()
+    return render(request, 'cadastro.html', {'form': form})
 
+
+def processaform(request):
+    form = formularioCadastro(request.POST)
+    nome = form.data['nome']
+    
+    email = form.data['email']
+    senha = form.data['password']
+    
+    data = {}
+    data['msg'] = 'Usuário cadastrado com sucesso!'
+    data['class'] = 'alert-success'
+    return render(request,'cadastro.html',data)
+    
 
 
 def painellogin(request):

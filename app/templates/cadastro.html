@@ -19,7 +19,7 @@
         <div class="form-box">
             <h2>Criar Conta</h2>
             <p> Já é um membro? <a href="/painellogin/">Login</a></p>
-            <form name="form-users" id="formUsers" method="post" action="/store/">
+            <form name="form-users" id="formUsers" method="post" action="/processa/">
                 {% if msg %}
                 <div class="alert {{class}}"> 
                     {{msg}} 
@@ -29,8 +29,10 @@
 
                 {% csrf_token %}
 
-
-                <div class="input-group">
+                {{form.nome}}
+                {{form.cpf}}
+                {{form.email}}
+                <!-- <div class="input-group">
                     <label for="nome"> Nome </label>
                     <input type="text" id="name"  name= "name" placeholder="Digite seu nome" required>
                 </div>
@@ -55,8 +57,8 @@
                 <div class="input-group">
                     <label for="CPF"> CPF</label>
                     <input type="text" oninput="mascara(this)" name="cpf" id="cpf" placeholder="CPF:"  required>
-                    <!-- <input type="text" id="CPF" placeholder="Digite seu CPF" required> -->
-                </div>
+                    <!-- <input type="text" id="CPF" placeholder="Digite seu CPF" required> </div> -->-->
+                
 
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
