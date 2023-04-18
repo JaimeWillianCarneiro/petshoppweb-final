@@ -10,9 +10,11 @@ SEX_CHOICES = (
 class cliente(models.Model):
     
     nome= models.CharField(max_length=50)
+    sobrenome = models.CharField(max_length=50)
+    nomeUsuario = models.CharField(max_length=15)
     email = models.CharField(max_length=30)
-    telefone = models.IntegerField()
-    cpf = models.IntegerField()
+    telefone = models.CharField(max_length=12)
+    cpf = models.CharField(max_length=15)
     senha = models.CharField(max_length=12)
     def __str__(self):
             return f"{self.nome}"   
