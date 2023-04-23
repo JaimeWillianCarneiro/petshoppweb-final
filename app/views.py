@@ -20,6 +20,25 @@ def processaform(request):
         data['class'] = 'alert-success'
         return render(request,'cadastro.html',data)
     
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+
+from .forms import CadastroForm
+
+def cadastro_view(request):
+    form = CadastroForm()
+    if request.method == 'POST':
+        form = CadastroForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password1']
+            user = User.objects.create_user(username, email, password)
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            return redirect('home')
+    return render(request, 'cadastro.html', {'form': form})
 
 
 def painellogin(request):
@@ -85,3 +104,21 @@ def dologin(request):
 def logouts(request):
     logout(request)
     return redirect('/home/')
+
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+
+from .forms import LoginForm
+
+def login_view(request):
+    form = LoginForm()
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            return redirect('/produtos/')
+    return render(request, 'login.html', {'form': form})
