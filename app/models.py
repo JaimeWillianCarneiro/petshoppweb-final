@@ -7,6 +7,8 @@ SEX_CHOICES = (
 )
 
 #OK
+
+
 class cliente(models.Model):
     
     nome= models.CharField(max_length=50)
