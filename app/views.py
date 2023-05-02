@@ -19,26 +19,23 @@ def processaform(request):
         data['msg'] = 'Usuário cadastrado com sucesso!'
         data['class'] = 'alert-success'
         return render(request,'cadastro.html',data)
-    
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
 
-from .forms import CadastroForm
 
-def cadastro_view(request):
-    form = CadastroForm()
-    if request.method == 'POST':
-        form = CadastroForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password1']
-            user = User.objects.create_user(username, email, password)
-            user = authenticate(request, username=username, password=password)
-            login(request, user)
-            return redirect('home')
-    return render(request, 'cadastro.html', {'form': form})
+# from .forms import CadastroForm
+
+# def cadastro_view(request):
+#     form = CadastroForm()
+#     if request.method == 'POST':
+#         form = CadastroForm(request.POST)
+#         if form.is_valid():
+#             username = form.cleaned_data['username']
+#             email = form.cleaned_data['email']
+#             password = form.cleaned_data['password1']
+#             user = User.objects.create_user(username, email, password)
+#             user = authenticate(request, username=username, password=password)
+#             login(request, user)
+#             return redirect('home')
+#     return render(request, 'cadastro.html', {'form': form})
 
 
 def painellogin(request):
@@ -56,7 +53,7 @@ def store(request):
         usuario_aux1 = User.objects.get(username=request.POST['username'])
 
         if usuario_aux or usuario_aux1 :
-            return render(request, 'caminho para o index', {'msg': 'Erro! Já existe um usuário com o mesmo e-mail'})
+          
                 
             data['msg'] = 'Já existe um usuário com o mesmo e-mail ou como mesmo nome de usuário!'
             data['class'] = 'alert-danger'
@@ -66,10 +63,10 @@ def store(request):
             data['msg'] = 'Senha e confirmação de senha diferentes!'
             data['class'] = 'alert-danger'
         else:
-            print(request.POST['user'])
-            user = User.objects.create_user(request.POST['user'], request.POST['email'], request.POST['password'])
+            # print(request.POST['user'])
+            user = User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password'])
             user.first_name = request.POST['name']
-            user.last_name = request.POST['last_name']
+            user.last_name = request.POST['sobrenome']
             user.save()
             data['msg'] = 'Usuário cadastrado com sucesso!'
             data['class'] = 'alert-success'
@@ -109,7 +106,7 @@ def logouts(request):
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 
-from .forms import LoginForm
+# from .forms import LoginForm
 
 def login_view(request):
     form = LoginForm()

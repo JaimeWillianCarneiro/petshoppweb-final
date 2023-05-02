@@ -36,14 +36,14 @@ class formularioCadastro(forms.ModelForm):
 
 
 
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=100)
-    password = forms.CharField(widget=forms.PasswordInput)
-    def clean(self):
-        cleaned_data = super().clean()
-        username = cleaned_data.get('username')
-        password = cleaned_data.get('password')
-    if not authenticate(username=username, password=password):
-        raise forms.ValidationError('Invalid username or password')
+# class LoginForm(forms.Form):
+#     username = forms.CharField(max_length=100)
+#     password = forms.CharField(widget=forms.PasswordInput)
+#     def clean(self):
+#         cleaned_data = super().clean()
+#         username = cleaned_data.get('username')
+#         password = cleaned_data.get('password')
+#     if not authenticate(username=username, password=password):
+#         raise forms.ValidationError('Invalid username or password')
 
 
