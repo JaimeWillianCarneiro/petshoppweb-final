@@ -5,6 +5,10 @@ from .forms import formularioCadastro
 def home(request):
     return render(request, 'index.html')
 
+def home2(request):
+    return render(request, 'index2.html')
+
+
 # Create your views here.
 def cadastro (request):
     form = formularioCadastro()
@@ -89,7 +93,7 @@ def dologin(request):
         print('existe usuario')
         login(request, user)
         
-        return redirect('/produtos/')
+        return redirect('/home/')
     else:
         print('n existe')
         data['msg'] = 'Usuário ou Senha inválidos!'

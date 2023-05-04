@@ -15,19 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import cadastro,painellogin, store, dologin, home, produtos, processaform
+from app.views import cadastro,painellogin, store, dologin, home, produtos, processaform, home2, logouts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', home),
     path('home/', home),
+    path('home2/', home2),
     path('login/', painellogin),
     path('cadastro/', cadastro), 
     path('store/', store),
     path('dologin/', dologin),
     path('produtos/', produtos),
     path('processa/', processaform),
+    path('logouts/', logouts),
 
 
 ]

@@ -1,0 +1,874 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PetShop Supimpa </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+
+    
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">] -->
+
+
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+	<!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+
+
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <!-- <link rel="stylesheet" href="css/jquery.timepicker.css"> -->
+	
+	
+	
+	<link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+    <!-- <link rel="stylesheet" href="css/flaticon.css"> -->
+	
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+
+	
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+	
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+
+
+  <body>
+
+    <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-1"></span>PetShop Supimpa</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span> Menu
+			  </button>
+			  <div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="#sobre_nos" class="nav-link">Sobre nós</a></li>
+					<li class="nav-item"><a href="/produtos/" class="nav-link">Produtos</a></li>
+					<li class="nav-item"><a href="#FAQ" class="nav-link">FAQ</a></li>
+				  <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+				  <li class="nav-item"><a href="#planos" class="nav-link">Planos</a></li>
+				  <!-- <li class="nav-item"><a href="#" class="nav-link">Contato</a></li> -->
+				  <li class="nav-item"><a href="/login/" class="nav-link">Login</a></li>
+				</ul>
+				
+			  </div>
+			  
+			</div>
+			<p class="navbar-nav mr-5"> Bem vindo(a), {{user.first_name}}</p>
+		  </nav>
+  <!-- END nav -->
+
+  <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+	  <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+		<div class="col-md-11 ftco-animate text-center">
+			<h1 class="mb-4">Oferecendo sempre o melhor para o seu companheiro de todo dia.</h1>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <section class="ftco-section bg-light ftco-no-pt ftco-intro">
+	<div class="container">
+		<div class="row">
+	  <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+		<div class="d-block services active text-center">
+		  <div class="icon d-flex align-items-center justify-content-center">
+				<span class="flaticon-blind"></span>
+		  </div>
+		  
+		  <div class="media-body">
+			<h3 class="heading">Seu amigão terá tratamento vip.</h3>
+			<p>Os serviços em um só lugar. Atendemos as necessidades de seu Pet, com os melhores profissionais da sua cidade.</p>
+			<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+		  </div>
+		</div>      
+	  </div>
+	  <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+		<div class="d-block services text-center">
+		  <div class="icon d-flex align-items-center justify-content-center">
+				<span class="flaticon-dog-eating"></span>
+		  </div>
+		  
+		  <div class="media-body">
+			<h3 class="heading">Melhores produtos para o deu pet.</h3>
+			<p>Aqui os melhores produtos do mercado, com um preço justo e certificado da anvisa. Seu Pet com o que há da melhor qualidade!</p>
+			<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+		  </div>
+		</div>    
+	  </div>
+	  <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+		<div class="d-block services text-center">
+		  <div class="icon d-flex align-items-center justify-content-center">
+				<span class="flaticon-grooming"></span>
+		  </div>
+		  <div class="media-body">
+			<h3 class="heading">Banho e tosa de luxo.</h3>
+			<p>Nossos colaboradores são os melhores em banho e tosa, seu pet sempre estará bonito e cheiroso.</p>
+			<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="fa fa-chevron-right"></span><i class="sr-only">Read more</i></a>
+		  </div>
+		</div>      
+	  </div>
+	</div>
+	</div>
+</section>
+
+
+<section id="sobre_nos" class="ftco-section ftco-no-pt ftco-no-pb">
+	<div class="container">
+		<div class="row d-flex no-gutters">
+			<div class="col-md-5 d-flex">
+				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url('/static/images/about-1.jpg');">
+				</div>
+			</div>
+			<div class="col-md-7 pl-md-5 py-md-5">
+				<div class="heading-section pt-md-5">
+			<h2 class="mb-4">Porque somos destaque no mercado?</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-6 services-2 w-100 d-flex">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-stethoscope"></span></div>
+						<div class="text pl-3">
+							<h4>O melhor atendimento</h4>
+							<p>Sim, o atendimento aqui é específico para você cliente e seu pet, para atender as suas necessicidades.</p>
+						</div>
+					</div>
+					<div class="col-md-6 services-2 w-100 d-flex">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-customer-service"></span></div>
+						<div class="text pl-3">
+							<h4>Suporte ao cliente</h4>
+							<p>Temos um chat 24 horas onde você pode acompanhar pedidos, consultar planos e qualquer dúvida.</p>
+						</div>
+					</div>
+					<div class="col-md-6 services-2 w-100 d-flex">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-emergency-call"></span></div>
+						<div class="text pl-3">
+							<h4>Serviços de emergência</h4>
+							<p>UTIs Pets, hospitais e clinicas para a emergência do seu pet.</p>
+						</div>
+					</div>
+					<div class="col-md-6 services-2 w-100 d-flex">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-veterinarian"></span></div>
+						<div class="text pl-3">
+							<h4>Ajuda Veterinária</h4>
+							<p>Veterinários especializados pertinho de você em qualquer momento!</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	</div>
+</section>
+<section class="ftco-counter" id="section-counter">
+	<div class="container">
+			<div class="row">
+	  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		<div class="block-18 text-center">
+		  <div class="text">
+			<strong class="number" data-number="1250">0</strong>
+		  </div>
+		  <div class="text">
+			  <span>Clientes</span>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		<div class="block-18 text-center">
+		  <div class="text">
+			<strong class="number" data-number="300">0</strong>
+		  </div>
+		  <div class="text">
+			  <span>Profissionais</span>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		<div class="block-18 text-center">
+		  <div class="text">
+			<strong class="number" data-number="1500">0</strong>
+		  </div>
+		  <div class="text">
+			  <span>Produtos</span>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		<div class="block-18 text-center">
+		  <div class="text">
+			<strong class="number" data-number="500">0</strong>
+		  </div>
+		  <div class="text">
+			  <span>Pets</span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	</div>
+</section>
+<section id="FAQ" class="ftco-section bg-light ftco-faqs">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 order-md-last">
+				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url('/static/images/about.jpg');">
+					<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+						<span class="fa fa-play"></span>
+					</a>
+				</div>
+				<div class="d-flex mt-3">
+					<div class="img img-2 mr-md-2" style="background-image:url('/static/images/about-2.jpg');"></div>
+					<div class="img img-2 ml-md-2" style="background-image:url('/static/images/about-3.jpg');"></div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="heading-section mb-5 mt-5 mt-lg-0">
+			<h2 class="mb-3">Perguntas frequentes</h2>
+				</div>
+				<div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
+					  <div class="card">
+						<div class="card-header p-0" id="headingOne">
+						  <h2 class="mb-0">
+							<button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+								<p class="mb-0">Qual ração dar para o meu Pet?</p>
+							  <i class="fa" aria-hidden="true"></i>
+							</button>
+						  </h2>
+						</div>
+						<div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+						  <div class="card-body py-3 px-0">
+							  <ol>
+								  <li>Uma ração que tenha selo de qualidade e bons ingredientes;</li>
+								  <li>Uma ração deve atender as necessidades nutricionais básicas do seu Pet;</li>
+								  <li>Cada espécie tem suas necessicidades específicas, procure aquilo que o seu Pet precisa;</li>
+								  <li>Faixa etária, dietas especiais, ingredientes, devem ser analisados na hora da compra.</li>
+								  
+							  </ol>
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="card">
+						<div class="card-header p-0" id="headingTwo" role="tab">
+						  <h2 class="mb-0">
+							<button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+								<p class="mb-0">Qual melhor brinquedo para o meu Pet?</p>
+							  <i class="fa" aria-hidden="true"></i>
+							</button>
+						  </h2>
+						</div>
+						<div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+						  <div class="card-body py-3 px-0">
+							  <ol>
+								  <li>Ofereça somente brinquedos desenvolvidos exclusivamente para a espécie do seu pet. Só assim você tem certeza de que os materiais usados serão seguros e atóxicos para ele;</li>
+								  <li>A idade e o porte do animal de estimação também devem ser levados em consideração. Brinquedos pequenos demais podem ter suas partes ingeridas pelo pet, já um brinquedo muito grande pode fazer com que ele perca o interesse na brincadeira;</li>
+								  <li>Lembre-se que, apesar de mais caros, brinquedos mais resistentes, como as cordas e os mordedores, duram mais, são mais seguros e precisam ser trocados com menos frequência;</li>								</li>
+								  <li> Dê prioridade à variedade e não à quantidade;</li>
+								  <li>Embora novas brincadeiras possam ser estimuladas, procure descobrir as preferências do pet e adquira brinquedos que vão de encontro a elas!</li>
+							  </ol>
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="card">
+						<div class="card-header p-0" id="headingThree" role="tab">
+						  <h2 class="mb-0">
+							<button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+								<p class="mb-0">Qual o melhor banho e tosa para o meu Pet?</p>
+							  <i class="fa" aria-hidden="true"></i>
+							</button>
+						  </h2>
+						</div>
+						<div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+						  <div class="card-body py-3 px-0">
+							  <ol>
+								  <li>O atendimento precisa ser realizado com profissionalismo para ter qualidade e garantir a segurança e o bem-estar do animal;</li>
+								  <li>Verifique o ambiente onde é feito o banho e a tosa;</li>
+								  <li>Inforome-se a respeito dos produtos utilizados;</li>
+								  <li>Procure saber sobre os profissionais;</li>
+								  <li>Procure atendimento especializado.</li>
+							  </ol>
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="card">
+						<div class="card-header p-0" id="headingFour" role="tab">
+						  <h2 class="mb-0">
+							<button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+								<p class="mb-0">Quando fazer e a castração o Pet?</p>
+							  <i class="fa" aria-hidden="true"></i>
+							</button>
+						  </h2>
+						</div>
+						<div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
+						  <div class="card-body py-3 px-0">
+							  <ol>
+								<li>Fazer a castração na hora certa, logo após o pet atingir a maturidade sexual;</li>
+								  <li>A castração previne doenças diversas no pet;</li>
+								  <li>Informe-se a respeito da espécie do seu pet, sobre a idade adequada e a maneira adequeda para a castração;</li>
+								  <li>procure bons profissionais.</li>
+								  
+
+
+							  </ol>
+						  </div>
+						</div>
+					  </div>
+					</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+<section class="ftco-section testimony-section" style="background-image: url('/static/images/bg_2.jpg');">
+	<div class="overlay"></div>
+  <div class="container">
+	<div class="row justify-content-center pb-5 mb-3">
+	  <div class="col-md-7 heading-section text-center ftco-animate">
+		<h2>Clientes Felizes &amp; Feedbacks</h2>
+	  </div>
+	</div>
+	<div class="row ftco-animate">
+	  <div class="col-md-12">
+		<div class="carousel-testimony owl-carousel ftco-owl">
+		  <div class="item">
+			<div class="testimony-wrap py-4">
+				<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+			  <div class="text">
+				<p class="mb-4">Ótimo site, ótimos profissionais!</p>
+				<div class="d-flex align-items-center">
+					<div class="user-img" style="background-image: url('static/images/person_1.jpg')"></div>
+					<div class="pl-3">
+						<p class="name">Silvi Almeida</p>
+						<span class="position">Advogado</span>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="item">
+			<div class="testimony-wrap py-4">
+				<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+			  <div class="text">
+				<p class="mb-4">Meu gatinho está sendo cuidado pelos melhores veterinários da cidade!</p>
+				<div class="d-flex align-items-center">
+					<div class="user-img" style="background-image: url('/static/images/person_2.jpg')"></div>
+					<div class="pl-3">
+						<p class="name">Lucineide Silveira de Azevedo</p>
+						<span class="position">Aposentada</span>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="item">
+			<div class="testimony-wrap py-4">
+				<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+			  <div class="text">
+				<p class="mb-4">A farmacia do meu pet foi aqui quando mais precisava!</p>
+				<div class="d-flex align-items-center">
+					<div class="user-img" style="background-image: url('/static/images/person_3.jpg')"></div>
+					<div class="pl-3">
+						<p class="name">Rogerio Bueno</p>
+						<span class="position">Publicitário</span>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="item">
+			<div class="testimony-wrap py-4">
+				<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+			  <div class="text">
+				<p class="mb-4">A belinha quebrou a perna e graças ao plano de saúde ela teve direito a emergência 24 horas, o que salvou a perniinha dela!</p>
+				<div class="d-flex align-items-center">
+					<div class="user-img" style="background-image: url('/static/images/person_1.jpg')"></div>
+					<div class="pl-3">
+						<p class="name">MAria Heloisa</p>
+						<span class="position">Universitária</span>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="item">
+			<div class="testimony-wrap py-4">
+				<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+			  <div class="text">
+				<p class="mb-4">Comprei tantos brinquedos e roupinhas! Todas lindas e a entrega foi muito rápida!</p>
+				<div class="d-flex align-items-center">
+					<div class="user-img" style="background-image: url('/static/images/person_2.jpg')"></div>
+					<div class="pl-3">
+						<p class="name">Alvaro Alves</p>
+						<span class="position">Aposentado</span>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+
+<section id="planos" class="ftco-section bg-light">
+	<div class="container">
+		<div class="row justify-content-center pb-5 mb-3">
+	  <div class="col-md-7 heading-section text-center ftco-animate">
+		<h2>Planos</h2>
+	  </div>
+	</div>
+		<div class="row">
+			<div class="col-md-4 ftco-animate">
+		  <div class="block-7">
+			  <div class="img" style="background-image: url('/static/images/pricing-1.jpg');"></div>
+			<div class="text-center p-4">
+				<span class="excerpt d-block">Petisquinho</span>
+				<span class="price"><sup>$</sup> <span class="number">49</span> <sub>/mos</sub></span>
+			
+				<ul class="pricing-text mb-5">
+				  <li><span class="fa fa-check mr-2"></span>3 Caminhas por semana</li>
+				  <li><span class="fa fa-check mr-2"></span>2 Visitas Veterinária por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Pet Spa por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Banho & tosa a cada 15 dias</li>
+				  <li><span class="fa fa-check mr-2"></span>Promoções exclusivas em toda a loja </li>
+				  
+				</ul>
+
+				<a href="#" class="btn btn-primary d-block px-2 py-3">Assinar</a>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 ftco-animate">
+		  <div class="block-7">
+			  <div class="img" style="background-image: url('/static/images/pricing-2.jpg');"></div>
+			<div class="text-center p-4">
+				<span class="excerpt d-block">Aquecendo</span>
+				<span class="price"><sup>$</sup> <span class="number">79</span> <sub>/mos</sub></span>
+				
+				<ul class="pricing-text mb-5">
+				  <li><span class="fa fa-check mr-2"></span>5 Caminhas por semana</li>
+				  <li><span class="fa fa-check mr-2"></span>3 Visitas Veterinária por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>3 Pet Spa por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Caixinha petisquinho por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>Promações e brindes nos produtos do site (produtos farmacêticos não acompanham brinde)</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Banho & tosa a cada 10 dias</li>
+				</ul>
+
+				<a href="#" class="btn btn-primary d-block px-2 py-3">Assinar</a>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 ftco-animate">
+		  <div class="block-7">
+			  <div class="img" style="background-image: url('/static/images/pricing-3.jpg');"></div>
+			<div class="text-center p-4">
+				<span class="excerpt d-block">Pet Vip</span>
+				<span class="price"><sup>$</sup> <span class="number">109</span> <sub>/mos</sub></span>
+				
+				<ul class="pricing-text mb-5">
+				  <li><span class="fa fa-check mr-2"></span>7 Caminhas por semana</li>
+				  <li><span class="fa fa-check mr-2"></span>7 Visitas Veterinária por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>6 Pet Spa por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>Free Supports</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Caixa Pet Vip por mês</li>
+				  <li><span class="fa fa-check mr-2"></span>Promações e brindes nos produtos do site (produtos farmacêticos não acompanham brinde)</li>
+				  <li><span class="fa fa-check mr-2"></span>Direito a emergência 24 horas</li>
+				  <li><span class="fa fa-check mr-2"></span>1 Banho & tosa a cada 7 dias</li>
+				</ul>
+
+				<a href="#" class="btn btn-primary d-block px-2 py-3">Assinar</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</section>
+
+
+<section id="galeria" class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center pb-5 mb-3">
+  <div class="col-md-7 heading-section text-center ftco-animate">
+	<h2>Pets Galeria</h2>
+  </div>
+</div>
+		<div class="row">
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-1.jpg');">
+		<a href="/static/images/gallery-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Gato</span>
+			  <h2><a href="work-single.html">Gato Persa</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-2.jpg');">
+		<a href="/static/images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Cachorro</span>
+			  <h2><a href="work-single.html">Lulu da Pomerânia</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-3.jpg');">
+		<a href="/static/images/gallery-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Gato</span>
+			  <h2><a href="work-single.html">Gato Sphynx</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-4.jpg');">
+		<a href="/static/images/gallery-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Gato</span>
+			  <h2><a href="work-single.html">Gato de pelo curto inglês</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-5.jpg');">
+		<a href="/static/images/gallery-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Cachorro</span>
+			  <h2><a href="work-single.html">Beagle</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 ftco-animate">
+	<div class="work mb-4 img d-flex align-items-end" style="background-image: url('/static/images/gallery-6.jpg');">
+		<a href="/static/images/gallery-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="fa fa-expand"></span>
+				</a>
+		<div class="desc w-100 px-4">
+		  <div class="text w-100 mb-3">
+			  <span>Cachorro</span>
+			  <h2><a href="work-single.html">Pug</a></h2>
+		  </div>
+	  </div>
+	</div>
+  </div>
+</div>
+	</div>
+</section>
+<section id="blog" class="ftco-section bg-light">
+	<div class="container">
+	  <div class="row justify-content-center pb-5 mb-3">
+		<div class="col-md-7 heading-section text-center ftco-animate">
+
+		   <h2>Notícias do Blog</h2>
+		</div>
+	  </div>
+	  <div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry align-self-stretch">
+			<a href="blog-single.html" class="block-20 rounded" style="background-image: url('/static/images/image_1.jpg');">
+			</a>
+			<div class="text p-4">
+				<div class="meta mb-2">
+				<div><a href="#">23 de Março de 2021</a></div>
+				<div><a href="#">Admin</a></div>
+				<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span>3</a></div>
+			  </div>
+			  <h3 class="heading"><a href="#">Cachorro é adotado depois de acidente que o deixa cego.</a></h3>
+			</div>
+		  </div>
+		 </div> 
+		 <div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry align-self-stretch">
+			<a href="blog-single.html" class="block-20 rounded" style="background-image: url('/static/images/image_2.jpg');">
+			</a>
+			<div class="text p-4">
+				<div class="meta mb-2">
+				<div><a href="#">24 de Janeiro de 2023</a></div>
+				<div><a href="#">Admin</a></div>
+				<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+			  </div>
+			  <h3 class="heading"><a href="#">Workshop sobre banho & tosa ocorrerá nesta terça-feira no Jaraguá!</a></h3>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+		  <div class="blog-entry align-self-stretch">
+			<a href="blog-single.html" class="block-20 rounded" style="background-image: url('/static/images/image_3.jpg');">
+			</a>
+			<div class="text p-4">
+				<div class="meta mb-2">
+				<div><a href="#">28 de Março de 2023</a></div>
+				<div><a href="#">Admin</a></div>
+				<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span>5</a></div>
+			  </div>
+			  <h3 class="heading"><a href="#">Ifal-Campus Maceió promoverá primeira feira de doação de pets!</a></h3>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section> 
+
+
+  <section id="contato" class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img" style="background-image: url('/static/images/bg_3.jpg');">
+	<div class="overlay"></div>
+<div class="container">
+	<div class="row d-md-flex justify-content-end">
+		<div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate">
+			<h2 class="mb-4">Consulta Grátis</h2>
+			<form action="#" class="appointment">
+				<div class="row">
+					<div class="col-md-12">
+							<div class="form-group">
+							<div class="form-field">
+						  <div class="select-wrap">
+				  <div class="icon"><span class="fa fa-chevron-down"></span></div>
+				  <select name="" id="" class="form-control">
+					  <option value="">Selecione os serviços</option>
+					<option value="">Consulta Veterinária</option>
+					<option value="">Passeio para o seu pet</option>
+					<option value="">Pet Spa</option>
+					<option value="">Pet Grooming</option>
+					<option value="">Plano de Saúde</option>
+					<option value="">Babá de Pet</option>
+				  </select>
+				</div>
+				  </div>
+						</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Seu nome">
+				</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Número de Celular">
+				</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="input-wrap">
+						<div class="icon"><span class="fa fa-calendar"></span></div>
+						<input type="text" class="form-control appointment_date" placeholder="Data">
+					</div>
+						</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="input-wrap">
+						<div class="icon"><span class="fa fa-clock-o"></span></div>
+						<input type="text" class="form-control appointment_time" placeholder="Hora">
+					</div>
+						</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+				  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Memssagem"></textarea>
+				</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+				  <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
+				</div>
+						</div>
+				</div>
+	  </form>
+		</div>
+	</div>
+</div>
+</section>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+				<h2 class="footer-heading">Babá de Pet</h2>
+				<p>Serviço qualificado pelos orgãos de fiscalização das leis trabalhistas!</p>
+				<ul class="ftco-footer-social p-0">
+	  <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+	  <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+	  <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+	</ul>
+			</div>
+			
+			<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+				<h2 class="footer-heading">Últimas Notícias</h2>
+				<div class="block-21 mb-4 d-flex">
+	  <a class="img mr-4 rounded" style="background-image: url('/static/images/image_1.jpg');"></a>
+	  <div class="text">
+		<h3 class="heading"><a href="#">Novo hospital Pet chega em Alagoas!</a></h3>
+		<div class="meta">
+		  <div><a href="#"><span class="icon-calendar"></span> 7 de Dezembro de 2022</a></div>
+		  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+		  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+		</div>
+	  </div>
+	</div>
+	<div class="block-21 mb-4 d-flex">
+	  <a class="img mr-4 rounded" style="background-image: url('/static/images/image_2.jpg');"></a>
+	  <div class="text">
+		<h3 class="heading"><a href="#">Cursos de Banho & Tosa no Senac-Maceió</a></h3>
+		<div class="meta">
+		  <div><a href="#"><span class="icon-calendar"></span> 7 de março de 2023</a></div>
+		  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+		  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+		</div>
+	  </div>
+	</div> 
+			</div>
+			<div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+				<h2 class="footer-heading">Links</h2>
+				<ul class="list-unstyled">
+	  <li><a href="#" class="py-2 d-block">Home</a></li>
+	  <li><a href="#sobre_nos" class="py-2 d-block">Sobre nós</a></li>
+	  <li><a href="#FAQ" class="py-2 d-block">FAQ</a></li>
+	  <li><a href="/produtos" class="py-2 d-block">Produtos</a></li>
+	  <li><a href="#blog" class="py-2 d-block">Blog</a></li>
+	  <li><a href="#contato" class="py-2 d-block">Contato</a></li>
+	</ul>
+			</div> 
+
+			<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+				<h2 class="footer-heading">Dúvidas?</h2>
+				<div class="block-23 mb-3">
+	  <ul>
+		<li><span class="icon fa fa-map"></span><span class="text">Rua Monitori-Maceió, Alagoas,Brasil</span></li>
+		<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+		<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
+	  </ul>
+	</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+  <div class="col-md-12 text-center">
+
+	<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  </div>
+</div>
+	</div>
+</footer>
+
+
+
+
+
+
+		    
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+    
+		<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+		<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+		<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+		<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+				
+		<script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+		<script src="{% static 'js/scrollax.min.js' %}"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		<script src="{% static 'js/google-map.js' %}"></script>
+
+		<script src="{% static 'js/main.js' %}"></script>
+<!-- 
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="js/jquery.timepicker.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/scrollax.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		<script src="js/google-map.js"></script>
+		<script src="js/main.js"></script> -->
+	  
+		   
+	</body>
+
+	
+
+	</html>

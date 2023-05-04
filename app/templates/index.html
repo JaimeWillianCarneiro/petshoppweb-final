@@ -79,23 +79,36 @@
 
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>PetShop Supimpa</a>
+				<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-1"></span>PetShop Supimpa</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="fa fa-bars"></span> Menu
 			  </button>
 			  <div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Veterinários</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-				  <li class="nav-item"><a href="#" class="nav-link">Galeria</a></li>
-				  <li class="nav-item"><a href="#" class="nav-link">Planos</a></li>
+					<li class="nav-item"><a href="#sobre_nos" class="nav-link">Sobre nós</a></li>
+					<li class="nav-item">
+						{% if request.user.is_authenticated %}
+						<a href="/produtos/" class="nav-link">Produtos</a>
+						{% else %}
+						<a href="/login/" class="nav-link">Produtos</a>
+						{% endif %}
+					</li>
+					<li class="nav-item"><a href="#FAQ" class="nav-link">FAQ</a></li>
+				  <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+				  <li class="nav-item"><a href="#planos" class="nav-link">Planos</a></li>
 				  <!-- <li class="nav-item"><a href="#" class="nav-link">Contato</a></li> -->
 				  <li class="nav-item"><a href="/login/" class="nav-link">Login</a></li>
 				</ul>
+				
 			  </div>
+			  
 			</div>
+			{% if request.user.is_authenticated %}
+			<a href="/logouts/"class="btn btn-danger rounded-pill mr-2">Sair</a><p class="navbar-nav mr-5"> Bem vindo(a), {{user.first_name}}</p>
+			{% else %}
+			
+		  	{% endif %}
 		  </nav>
   <!-- END nav -->
 
@@ -155,7 +168,7 @@
 </section>
 
 
-<section class="ftco-section ftco-no-pt ftco-no-pb">
+<section id="sobre_nos" class="ftco-section ftco-no-pt ftco-no-pb">
 	<div class="container">
 		<div class="row d-flex no-gutters">
 			<div class="col-md-5 d-flex">
@@ -246,7 +259,7 @@
 	</div>
 	</div>
 </section>
-<section class="ftco-section bg-light ftco-faqs">
+<section id="FAQ" class="ftco-section bg-light ftco-faqs">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 order-md-last">
@@ -264,7 +277,6 @@
 			<div class="col-lg-6">
 				<div class="heading-section mb-5 mt-5 mt-lg-0">
 			<h2 class="mb-3">Perguntas frequentes</h2>
-			<p>a</p>
 				</div>
 				<div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
 					  <div class="card">
@@ -457,7 +469,7 @@
 
 
 
-<section class="ftco-section bg-light">
+<section id="planos" class="ftco-section bg-light">
 	<div class="container">
 		<div class="row justify-content-center pb-5 mb-3">
 	  <div class="col-md-7 heading-section text-center ftco-animate">
@@ -532,7 +544,7 @@
 </section>
 
 
-<section class="ftco-section">
+<section id="galeria" class="ftco-section">
 	<div class="container">
 		<div class="row justify-content-center pb-5 mb-3">
   <div class="col-md-7 heading-section text-center ftco-animate">
@@ -622,7 +634,7 @@
 </div>
 	</div>
 </section>
-<section class="ftco-section bg-light">
+<section id="blog" class="ftco-section bg-light">
 	<div class="container">
 	  <div class="row justify-content-center pb-5 mb-3">
 		<div class="col-md-7 heading-section text-center ftco-animate">
@@ -678,7 +690,7 @@
   </section> 
 
 
-  <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img" style="background-image: url('/static/images/bg_3.jpg');">
+  <section id="contato" class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img" style="background-image: url('/static/images/bg_3.jpg');">
 	<div class="overlay"></div>
 <div class="container">
 	<div class="row d-md-flex justify-content-end">
@@ -789,11 +801,11 @@
 				<h2 class="footer-heading">Links</h2>
 				<ul class="list-unstyled">
 	  <li><a href="#" class="py-2 d-block">Home</a></li>
-	  <li><a href="#" class="py-2 d-block">Sobre nós</a></li>
-	  <li><a href="#" class="py-2 d-block">Serviços</a></li>
-	  <li><a href="#" class="py-2 d-block">Works</a></li>
-	  <li><a href="#" class="py-2 d-block">Blog</a></li>
-	  <li><a href="#" class="py-2 d-block">Contato</a></li>
+	  <li><a href="#sobre_nos" class="py-2 d-block">Sobre nós</a></li>
+	  <li><a href="#FAQ" class="py-2 d-block">FAQ</a></li>
+	  <li><a href="/login" class="py-2 d-block">Produtos</a></li>
+	  <li><a href="#blog" class="py-2 d-block">Blog</a></li>
+	  <li><a href="#contato" class="py-2 d-block">Contato</a></li>
 	</ul>
 			</div> 
 
@@ -812,7 +824,7 @@
   <div class="col-md-12 text-center">
 
 	<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos resevados <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
   </div>
 </div>
